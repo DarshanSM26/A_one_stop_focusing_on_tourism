@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cabing">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="Select a Bike"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/bikeRadioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/rx100RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:button="@null"
+                android:drawableTop="@drawable/img"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="RX100"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/activaRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:button="@null"
+                android:drawableTop="@drawable/img_1"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Activa"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/splendorRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:button="@null"
+                android:drawableTop="@drawable/img_2"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Splendor"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:text="Select a Car"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bikeRadioGroup" />
+
+        <RadioGroup
+            android:id="@+id/carRadioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <RadioButton
+                android:id="@+id/sedanRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:button="@null"
+                android:drawableTop="@drawable/img_3"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Sedan"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/suvRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:button="@null"
+                android:drawableTop="@drawable/img_4"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="SUV"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/hatchbackRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:button="@null"
+                android:drawableTop="@drawable/img_5"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Hatchback"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+
+        <EditText
+            android:id="@+id/distanceEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Enter Distance (km)"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/carRadioGroup" />
+
+        <Button
+            android:id="@+id/confirmBookingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="5dp"
+            android:text="Confirm Booking"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/distanceEditText" />
+
+
+        <Button
+            android:id="@+id/nearbyHotelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="20dp"
+            android:text="Nearby Hotel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirmBookingButton" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="136dp"
+            android:layout_marginBottom="4dp"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
